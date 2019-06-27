@@ -61,15 +61,27 @@
     <div id="warp">
         <ul>
             <li>
-                <img src="4.jpg" alt="风景图">
-                <img src="5.jpg" alt="风景图">
-                <img src="6.jpg" alt="风景图">
-                <img src="7.jpg" alt="风景图">
-                <img src="8.jpg" alt="风景图">
+                <img class="change" src="panda.jpg" data-src="4.jpg" alt="风景图">
+                <img class="change" src="panda.jpg" data-src="5.jpg" alt="风景图">
+                <img class="change" src="panda.jpg" data-src="6.jpg" alt="风景图">
+                <img class="change" src="panda.jpg" data-src="7.jpg" alt="风景图">
+                <img class="change" src="panda.jpg" data-src="8.jpg" alt="风景图">
 
             </li>
         </ul>
     </div>
+    <script src="lazyload.js"></script>
+    <script>
+    // 默认class是lazy
+    let images = document.querySelectorAll(".change");
+    window.addEventListener("load", function(event) {
+    // let timeout = setTimeout(function() { // 延迟5秒加载
+    // lazyload();
+    // }, 5000);
+    lazyload(images);
+    });
+    </script>
+
 
     <script>
         window.onload = function () {
